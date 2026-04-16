@@ -53,25 +53,59 @@
             Book Consultation
           </a>
         </div>
-        <button id="menuBtn" aria-label="Open menu" class="lg:hidden flex flex-col gap-1.5 p-2">
-          <span class="block w-6 h-px bg-white"></span>
-          <span class="block w-6 h-px bg-white"></span>
-          <span class="block w-6 h-px bg-white"></span>
+        <button id="menuBtn" aria-label="Open menu"
+                class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] rounded focus:outline-none">
+          <span class="menu-bar block w-6 h-[1.5px] bg-white rounded-full" style="transition:transform .3s ease,opacity .3s ease;"></span>
+          <span class="menu-bar block w-4 h-[1.5px] bg-white rounded-full" style="transition:transform .3s ease,opacity .3s ease;"></span>
+          <span class="menu-bar block w-6 h-[1.5px] bg-white rounded-full" style="transition:transform .3s ease,opacity .3s ease;"></span>
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-navy z-40 flex flex-col pt-24 px-8">
-      <nav class="flex flex-col gap-6">
-        <a href="about.html"    class="text-white text-2xl font-serif hover:text-gold transition-colors border-b border-white/10 pb-6">About</a>
-        <a href="services.html" class="text-gold   text-2xl font-serif border-b border-white/10 pb-6">Services</a>
-        <a href="insights.html" class="text-white text-2xl font-serif hover:text-gold transition-colors border-b border-white/10 pb-6">Insights</a>
-        <a href="contact.html"  class="text-white text-2xl font-serif hover:text-gold transition-colors border-b border-white/10 pb-6">Contact</a>
-      </nav>
-      <div class="mt-10">
-        <a href="contact.html" class="inline-block px-8 py-4 bg-gold text-navy font-semibold tracking-wide rounded hover:bg-cream transition-colors">Book a Consultation</a>
-      </div>
-    </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" aria-hidden="true"
+       class="lg:hidden fixed inset-0 bg-[#0A1628] z-[60] flex flex-col"
+       style="transform:translateX(100%);transition:transform .38s cubic-bezier(.16,1,.3,1);">
+    <div class="flex items-center justify-between px-6 h-20 border-b border-white/10 flex-shrink-0">
+      <a href="index.html">
+        <img src="Logo.jpeg" alt="MM Incorporated" class="h-8 w-auto" style="filter:brightness(0) invert(1);" />
+      </a>
+      <button id="closeMenuBtn" aria-label="Close menu"
+              class="w-10 h-10 flex items-center justify-center text-white/50 hover:text-white transition-colors rounded-full hover:bg-white/5">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 pt-2 pb-6" aria-label="Mobile navigation">
+      <a href="index.html" class="flex items-center justify-between py-5 border-b border-white/10 group">
+        <span class="font-serif text-2xl text-white group-hover:text-gold transition-colors duration-200">Home</span>
+        <svg class="w-5 h-5 text-white/25 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="about.html" class="flex items-center justify-between py-5 border-b border-white/10 group">
+        <span class="font-serif text-2xl text-white group-hover:text-gold transition-colors duration-200">About</span>
+        <svg class="w-5 h-5 text-white/25 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="services.html" class="flex items-center justify-between py-5 border-b border-white/10">
+        <span class="font-serif text-2xl text-gold font-semibold">Services</span>
+        <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="insights.html" class="flex items-center justify-between py-5 border-b border-white/10 group">
+        <span class="font-serif text-2xl text-white group-hover:text-gold transition-colors duration-200">Insights</span>
+        <svg class="w-5 h-5 text-white/25 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="contact.html" class="flex items-center justify-between py-5 border-b border-white/10 group">
+        <span class="font-serif text-2xl text-white group-hover:text-gold transition-colors duration-200">Contact</span>
+        <svg class="w-5 h-5 text-white/25 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+    </nav>
+    <div class="px-6 pt-6 pb-10 flex-shrink-0 border-t border-white/10">
+      <a href="contact.html" class="flex items-center justify-center w-full py-4 bg-gold text-navy font-semibold tracking-wide rounded text-sm hover:bg-cream transition-colors">
+        Book a Consultation
+      </a>
+    </div>
+  </div>
 
 
   <!-- ======================================================
@@ -505,17 +539,32 @@
     }, { passive: true });
 
     // Mobile menu
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+    const menuBtn      = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu   = document.getElementById('mobileMenu');
+    const menuBars     = menuBtn.querySelectorAll('.menu-bar');
     let menuOpen = false;
-    menuBtn.addEventListener('click', () => {
-      menuOpen = !menuOpen;
-      mobileMenu.classList.toggle('open', menuOpen);
-      document.body.style.overflow = menuOpen ? 'hidden' : '';
-    });
-    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-      menuOpen = false; mobileMenu.classList.remove('open'); document.body.style.overflow = '';
-    }));
+    function openMenu() {
+      menuOpen = true;
+      mobileMenu.style.transform = 'translateX(0)';
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      menuBars[0].style.transform = 'translateY(6px) rotate(45deg)';
+      menuBars[1].style.opacity   = '0';
+      menuBars[2].style.transform = 'translateY(-6px) rotate(-45deg)';
+    }
+    function closeMenu() {
+      menuOpen = false;
+      mobileMenu.style.transform = 'translateX(100%)';
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      menuBars[0].style.transform = '';
+      menuBars[1].style.opacity   = '';
+      menuBars[2].style.transform = '';
+    }
+    menuBtn.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMenu));
 
     // Scroll animations
     const observer = new IntersectionObserver((entries) => {
