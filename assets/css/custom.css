@@ -1,0 +1,279 @@
+/* ============================================================
+   MM Incorporated — Custom Styles
+   Supplements Tailwind CDN with animations, shared utilities
+   ============================================================ */
+
+/* --- Base & Typography ------------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Custom Scrollbar ------------------------------------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F8F7F4; }
+::-webkit-scrollbar-thumb { background: #C9A96E; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B8935A; }
+
+/* --- Scroll-Triggered Fade-Up ----------------------------- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up.delay-1 { transition-delay: 0.1s; }
+.fade-up.delay-2 { transition-delay: 0.2s; }
+.fade-up.delay-3 { transition-delay: 0.3s; }
+.fade-up.delay-4 { transition-delay: 0.4s; }
+.fade-up.delay-5 { transition-delay: 0.5s; }
+.fade-up.delay-6 { transition-delay: 0.6s; }
+
+/* --- Hero Load Animations --------------------------------- */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.hero-line-1 { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
+.hero-line-2 { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
+.hero-line-3 { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both; }
+.hero-line-4 { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.7s both; }
+.hero-deco   { animation: heroFadeIn 1.4s ease 0.9s both; }
+
+/* --- Navbar ----------------------------------------------- */
+#navbar {
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+#navbar.scrolled {
+  background-color: #0A1628 !important;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Mobile Menu ------------------------------------------ */
+#mobileMenu {
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobileMenu.open {
+  transform: translateX(0);
+}
+
+/* --- Gold Accent Heading Underline ------------------------ */
+.gold-rule {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #C9A96E;
+  margin-top: 16px;
+}
+
+.gold-rule-center {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #C9A96E;
+  margin: 16px auto 0;
+}
+
+/* --- Card Hover Lift -------------------------------------- */
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(10, 22, 40, 0.14);
+}
+
+/* --- Service Accordion ------------------------------------ */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s ease;
+  opacity: 0;
+}
+
+.accordion-content.open {
+  max-height: 600px;
+  opacity: 1;
+}
+
+.accordion-icon {
+  transition: transform 0.35s ease;
+}
+
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+/* --- Team Card Overlay ------------------------------------ */
+.team-card { position: relative; overflow: hidden; }
+
+.team-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+/* --- Article Image Zoom ----------------------------------- */
+.article-thumb {
+  overflow: hidden;
+}
+
+.article-thumb img,
+.article-thumb .img-placeholder {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.article-thumb:hover img,
+.article-thumb:hover .img-placeholder {
+  transform: scale(1.06);
+}
+
+/* --- Gold Bullet List ------------------------------------- */
+.gold-list { list-style: none; padding-left: 0; }
+
+.gold-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  color: #374151;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.gold-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 10px;
+  height: 2px;
+  background: #C9A96E;
+}
+
+/* --- Active Nav Link -------------------------------------- */
+.nav-active { color: #C9A96E !important; }
+
+/* --- Filter Pills (Insights) ------------------------------ */
+.filter-pill {
+  padding: 8px 20px;
+  border-radius: 9999px;
+  border: 1.5px solid #D1D5DB;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.filter-pill:hover,
+.filter-pill.active {
+  background: #0A1628;
+  border-color: #0A1628;
+  color: #ffffff;
+}
+
+/* --- Form Focus States ------------------------------------ */
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #C9A96E;
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+}
+
+/* --- Geometric Hero Pattern ------------------------------- */
+.hero-pattern {
+  background-image:
+    linear-gradient(rgba(201,169,110,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,110,0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* --- Page Hero (inner pages) ------------------------------ */
+.page-hero {
+  background: linear-gradient(135deg, #0A1628 0%, #0f2244 60%, #0A1628 100%);
+}
+
+/* --- Stat Counter ----------------------------------------- */
+.stat-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #0A1628;
+  line-height: 1;
+}
+
+.stat-number.light { color: #C9A96E; }
+
+/* --- CTA Section Background ------------------------------- */
+.cta-bg {
+  background: linear-gradient(135deg, #0A1628 0%, #0d1f3e 50%, #091422 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* --- Section Overline Text -------------------------------- */
+.overline {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C9A96E;
+}
+
+/* --- Divider Lines ---------------------------------------- */
+.gold-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A96E40, transparent);
+  margin: 0;
+}
+
+/* --- Responsive tweaks ------------------------------------ */
+@media (max-width: 640px) {
+  .stat-number { font-size: 2rem; }
+}
