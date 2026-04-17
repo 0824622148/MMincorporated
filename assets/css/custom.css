@@ -1,134 +1,166 @@
 /* ============================================================
    MM Incorporated — Custom Styles
-   Supplements Tailwind CDN with animations, shared utilities
+   Landers-inspired redesign: clean, white-dominant, authoritative
    ============================================================ */
 
-/* --- Base & Typography ------------------------------------ */
-html {
-  scroll-behavior: smooth;
-}
+/* --- Base ------------------------------------------------- */
+html { scroll-behavior: smooth; }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- Custom Scrollbar ------------------------------------- */
-::-webkit-scrollbar { width: 6px; }
+/* --- Scrollbar -------------------------------------------- */
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #F8F7F4; }
 ::-webkit-scrollbar-thumb { background: #C9A96E; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #B8935A; }
+::-webkit-scrollbar-thumb:hover { background: #b89358; }
 
 /* --- Scroll-Triggered Fade-Up ----------------------------- */
 .fade-up {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.fade-up.delay-1 { transition-delay: 0.1s; }
-.fade-up.delay-2 { transition-delay: 0.2s; }
-.fade-up.delay-3 { transition-delay: 0.3s; }
-.fade-up.delay-4 { transition-delay: 0.4s; }
-.fade-up.delay-5 { transition-delay: 0.5s; }
-.fade-up.delay-6 { transition-delay: 0.6s; }
+.fade-up.visible   { opacity: 1; transform: translateY(0); }
+.fade-up.delay-1   { transition-delay: 0.08s; }
+.fade-up.delay-2   { transition-delay: 0.16s; }
+.fade-up.delay-3   { transition-delay: 0.24s; }
+.fade-up.delay-4   { transition-delay: 0.32s; }
+.fade-up.delay-5   { transition-delay: 0.40s; }
+.fade-up.delay-6   { transition-delay: 0.48s; }
 
 /* --- Hero Load Animations --------------------------------- */
 @keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes heroFadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-
-.hero-line-1 { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
-.hero-line-2 { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
-.hero-line-3 { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both; }
-.hero-line-4 { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.7s both; }
-.hero-deco   { animation: heroFadeIn 1.4s ease 0.9s both; }
+.hero-line-1 { animation: heroFadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
+.hero-line-2 { animation: heroFadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.38s both; }
+.hero-line-3 { animation: heroFadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.52s both; }
+.hero-line-4 { animation: heroFadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.66s both; }
+.hero-deco   { animation: heroFadeIn 1.6s ease 1s both; }
 
 /* --- Navbar ----------------------------------------------- */
 #navbar {
-  transition: background-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
-
 #navbar.scrolled {
   background-color: #0A1628 !important;
-  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
 }
+
+/* --- Active Nav Link -------------------------------------- */
+.nav-active { color: #C9A96E !important; }
 
 /* --- Mobile Menu ------------------------------------------ */
 #mobileMenu {
   transform: translateX(100%);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
+#mobileMenu.open { transform: translateX(0); }
 
-#mobileMenu.open {
-  transform: translateX(0);
+/* --- Overline Label --------------------------------------- */
+.overline {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #C9A96E;
 }
 
-/* --- Gold Accent Heading Underline ------------------------ */
+/* --- Section Heading Underline ---------------------------- */
 .gold-rule {
   display: block;
-  width: 48px;
-  height: 3px;
+  width: 40px;
+  height: 2px;
   background: #C9A96E;
-  margin-top: 16px;
+  margin-top: 20px;
 }
-
 .gold-rule-center {
   display: block;
-  width: 48px;
-  height: 3px;
+  width: 40px;
+  height: 2px;
   background: #C9A96E;
-  margin: 16px auto 0;
+  margin: 20px auto 0;
 }
 
-/* --- Card Hover Lift -------------------------------------- */
+/* --- Stat Counter ----------------------------------------- */
+.stat-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0A1628;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.stat-number.light { color: #C9A96E; }
+@media (max-width: 640px) { .stat-number { font-size: 2.25rem; } }
+
+/* --- Practice Area Rows (Landers-style list) -------------- */
+.practice-row {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #F3F4F6;
+  text-decoration: none;
+  cursor: pointer;
+  transition: padding-left 0.3s ease, border-color 0.3s ease;
+  border-left: 3px solid transparent;
+  padding-left: 0;
+  gap: 2rem;
+}
+.practice-row:hover {
+  border-left-color: #C9A96E;
+  padding-left: 1.25rem;
+}
+
+/* --- Card Lift (articles, standard cards) ----------------- */
 .card-lift {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .card-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 48px rgba(10, 22, 40, 0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(10, 22, 40, 0.10);
 }
 
-/* --- Service Accordion ------------------------------------ */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.35s ease;
-  opacity: 0;
+/* --- Article Image Zoom ----------------------------------- */
+.article-thumb { overflow: hidden; }
+.article-thumb img {
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.article-thumb:hover img { transform: scale(1.05); }
+
+/* --- Gold Bullet List ------------------------------------- */
+.gold-list { list-style: none; padding-left: 0; }
+.gold-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: #374151;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.gold-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 8px;
+  height: 1.5px;
+  background: #C9A96E;
 }
 
-.accordion-content.open {
-  max-height: 600px;
-  opacity: 1;
-}
-
-.accordion-icon {
-  transition: transform 0.35s ease;
-}
-
-.accordion-item.open .accordion-icon {
-  transform: rotate(45deg);
-}
-
-/* --- Team Card Overlay ------------------------------------ */
+/* --- Team Card -------------------------------------------- */
 .team-card { position: relative; overflow: hidden; }
-
 .team-overlay {
   position: absolute;
   inset: 0;
@@ -137,72 +169,36 @@ body {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.3s ease;
 }
+.team-card:hover .team-overlay { opacity: 1; }
 
-.team-card:hover .team-overlay {
-  opacity: 1;
-}
-
-/* --- Article Image Zoom ----------------------------------- */
-.article-thumb {
+/* --- Service Accordion ------------------------------------ */
+.accordion-content {
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
+  opacity: 0;
 }
+.accordion-content.open { max-height: 700px; opacity: 1; }
+.accordion-icon { transition: transform 0.35s ease; }
+.accordion-item.open .accordion-icon { transform: rotate(45deg); }
 
-.article-thumb img,
-.article-thumb .img-placeholder {
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.article-thumb:hover img,
-.article-thumb:hover .img-placeholder {
-  transform: scale(1.06);
-}
-
-/* --- Gold Bullet List ------------------------------------- */
-.gold-list { list-style: none; padding-left: 0; }
-
-.gold-list li {
-  position: relative;
-  padding-left: 22px;
-  margin-bottom: 12px;
-  color: #374151;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-}
-
-.gold-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 11px;
-  width: 10px;
-  height: 2px;
-  background: #C9A96E;
-}
-
-/* --- Active Nav Link -------------------------------------- */
-.nav-active { color: #C9A96E !important; }
-
-/* --- Filter Pills (Insights) ------------------------------ */
+/* --- Filter Pills ----------------------------------------- */
 .filter-pill {
-  padding: 8px 20px;
+  padding: 7px 18px;
   border-radius: 9999px;
-  border: 1.5px solid #D1D5DB;
-  font-size: 0.875rem;
+  border: 1.5px solid #E5E7EB;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: #374151;
+  color: #6B7280;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
   background: transparent;
+  white-space: nowrap;
 }
-
-.filter-pill:hover,
-.filter-pill.active {
-  background: #0A1628;
-  border-color: #0A1628;
-  color: #ffffff;
-}
+.filter-pill:hover { border-color: #0A1628; color: #0A1628; }
+.filter-pill.active { background: #0A1628; border-color: #0A1628; color: #fff; }
 
 /* --- Form Focus States ------------------------------------ */
 .form-input:focus,
@@ -210,70 +206,59 @@ body {
 .form-select:focus {
   outline: none;
   border-color: #C9A96E;
-  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
-}
-
-/* --- Geometric Hero Pattern ------------------------------- */
-.hero-pattern {
-  background-image:
-    linear-gradient(rgba(201,169,110,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,169,110,0.04) 1px, transparent 1px);
-  background-size: 64px 64px;
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.12);
 }
 
 /* --- Page Hero (inner pages) ------------------------------ */
 .page-hero {
-  background: linear-gradient(135deg, #0A1628 0%, #0f2244 60%, #0A1628 100%);
+  background: linear-gradient(150deg, #0A1628 0%, #0f2244 70%, #0A1628 100%);
 }
 
-/* --- Stat Counter ----------------------------------------- */
-.stat-number {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.75rem;
-  font-weight: 700;
-  color: #0A1628;
-  line-height: 1;
-}
-
-.stat-number.light { color: #C9A96E; }
-
-/* --- CTA Section Background ------------------------------- */
+/* --- CTA Section ------------------------------------------ */
 .cta-bg {
-  background: linear-gradient(135deg, #0A1628 0%, #0d1f3e 50%, #091422 100%);
+  background: #0A1628;
   position: relative;
   overflow: hidden;
 }
-
-.cta-bg::before {
+.cta-bg::after {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%);
+  border: 1px solid rgba(201,169,110,0.08);
   pointer-events: none;
 }
 
-/* --- Section Overline Text -------------------------------- */
-.overline {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #C9A96E;
+/* --- Split Section (About) -------------------------------- */
+.split-img {
+  position: relative;
+  min-height: 460px;
+}
+.split-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.split-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,22,40,0.55) 0%, rgba(10,22,40,0.25) 100%);
 }
 
-/* --- Divider Lines ---------------------------------------- */
+/* --- Divider --------------------------------------------- */
 .gold-divider {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #C9A96E40, transparent);
-  margin: 0;
+  background: linear-gradient(90deg, transparent, rgba(201,169,110,0.3), transparent);
 }
 
-/* --- Responsive tweaks ------------------------------------ */
-@media (max-width: 640px) {
-  .stat-number { font-size: 2rem; }
+/* --- Responsive ------------------------------------------ */
+@media (max-width: 768px) {
+  .practice-row { gap: 1rem; }
 }
