@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Areas | MM Incorporated — Mamabolo at Law</title>
+  <meta name="description" content="MM Incorporated's practice areas: Corporate Law, Litigation, Property Law, Labour Law, and Compliance & Regulatory. Expert legal counsel across all disciplines." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:         '#0A1628',
+            'navy-light': '#0f2244',
+            gold:         '#C9A96E',
+            cream:        '#E8D5B0',
+            surface:      '#F8F7F4',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans:  ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased">
+
+  <!-- ======================================================
+       NAVIGATION
+  ====================================================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex-shrink-0 bg-white rounded-sm px-2 py-1 inline-flex items-center">
+          <img src="Logo.jpeg" alt="MM Incorporated" class="h-9 w-auto"  />
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="about.html"    class="text-white/80 hover:text-gold text-sm font-medium tracking-wide transition-colors duration-200">About</a>
+          <a href="services.html" class="nav-active text-sm font-medium tracking-wide transition-colors duration-200">Services</a>
+          <a href="insights.html" class="text-white/80 hover:text-gold text-sm font-medium tracking-wide transition-colors duration-200">Insights</a>
+          <a href="contact.html"  class="text-white/80 hover:text-gold text-sm font-medium tracking-wide transition-colors duration-200">Contact</a>
+          <a href="contact.html"
+             class="ml-4 px-6 py-2.5 bg-gold text-navy text-sm font-semibold tracking-wide rounded hover:bg-cream transition-colors duration-200 whitespace-nowrap">
+            Book Consultation
+          </a>
+        </div>
+        <button id="menuBtn" aria-label="Open menu"
+                class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] rounded focus:outline-none">
+          <span class="menu-bar block w-6 h-[1.5px] bg-white rounded-full" style="transition:transform .3s ease,opacity .3s ease;"></span>
+          <span class="menu-bar block w-4 h-[1.5px] bg-white rounded-full" style="transition:transform .3s ease,opacity .3s ease;"></span>
+          <span class="menu-bar block w-6 h-[1.5px] bg-white rounded-full" style="transition:transform .3s ease,opacity .3s ease;"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" aria-hidden="true"
+       class="lg:hidden fixed inset-0 bg-[#0A1628] z-[60] flex flex-col"
+       style="transform:translateX(100%);transition:transform .38s cubic-bezier(.16,1,.3,1);">
+    <div class="flex items-center justify-between px-6 h-20 border-b border-white/10 flex-shrink-0">
+      <a href="index.html" class="bg-white rounded-sm px-2 py-1 inline-flex items-center">
+        <img src="Logo.jpeg" alt="MM Incorporated" class="h-7 w-auto" />
+      </a>
+      <button id="closeMenuBtn" aria-label="Close menu"
+              class="w-10 h-10 flex items-center justify-center text-white/50 hover:text-white transition-colors rounded-full hover:bg-white/5">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 pt-2 pb-6" aria-label="Mobile navigation">
+      <a href="index.html" class="flex items-center justify-between py-5 border-b border-white/10 group">
+        <span class="font-serif text-2xl text-white group-hover:text-gold transition-colors duration-200">Home</span>
+        <svg class="w-5 h-5 text-white/25 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="about.html" class="flex items-center justify-between py-5 border-b border-white/10 group">
+        <span class="font-serif text-2xl text-white group-hover:text-gold transition-colors duration-200">About</span>
+        <svg class="w-5 h-5 text-white/25 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="services.html" class="flex items-center justify-between py-5 border-b border-white/10">
+        <span class="font-serif text-2xl text-gold font-semibold">Services</span>
+        <svg class="w-5 h-5 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="insights.html" class="flex items-center justify-between py-5 border-b border-white/10 group">
+        <span class="font-serif text-2xl text-white group-hover:text-gold transition-colors duration-200">Insights</span>
+        <svg class="w-5 h-5 text-white/25 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="contact.html" class="flex items-center justify-between py-5 border-b border-white/10 group">
+        <span class="font-serif text-2xl text-white group-hover:text-gold transition-colors duration-200">Contact</span>
+        <svg class="w-5 h-5 text-white/25 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+    </nav>
+    <div class="px-6 pt-6 pb-10 flex-shrink-0 border-t border-white/10">
+      <a href="contact.html" class="flex items-center justify-center w-full py-4 bg-gold text-navy font-semibold tracking-wide rounded text-sm hover:bg-cream transition-colors">
+        Book a Consultation
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ======================================================
+       PAGE HERO
+  ====================================================== -->
+  <section class="page-hero pt-36 pb-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=1920&q=80"
+           alt="" class="w-full h-full object-cover" loading="eager" />
+      <div class="absolute inset-0 bg-navy/70"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
+      <nav class="flex items-center gap-2 text-white/40 text-xs mb-10 tracking-widest uppercase">
+        <a href="index.html" class="hover:text-gold transition-colors">Home</a>
+        <span class="text-white/20">/</span>
+        <span class="text-gold">Services</span>
+      </nav>
+      <p class="overline mb-5">What We Do</p>
+      <h1 class="font-serif text-5xl lg:text-7xl text-white leading-tight tracking-tight max-w-2xl">
+        Our Practice Areas
+      </h1>
+      <div class="w-10 h-0.5 bg-gold mt-8 mb-6"></div>
+      <p class="text-white/55 text-lg max-w-xl leading-relaxed font-light">
+        Comprehensive legal solutions across eleven practice areas. One trusted firm for all your needs.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       SERVICES INTRO
+  ====================================================== -->
+  <section class="py-12 bg-surface border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        <a href="#civic-litigation" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 3L3 9l11 6 11-6-11-6z"/><path d="M3 19l11 6 11-6"/><path d="M3 14l11 6 11-6"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Civic Litigation</span>
+        </a>
+        <a href="#criminal-litigation" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h20v16H4z"/><path d="M8 6V4a6 6 0 0112 0v2"/><path d="M10 13h8M10 17h5"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Criminal Litigation</span>
+        </a>
+        <a href="#family-law" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="8" r="3"/><circle cx="18" cy="8" r="3"/><path d="M4 22c0-3.314 2.686-6 6-6h8c3.314 0 6 2.686 6 6"/><circle cx="14" cy="16" r="2"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Family Law</span>
+        </a>
+        <a href="#unlawful-arrest" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 3L4 7v8c0 5.25 4.5 10.167 10 11.333C20 25.167 24 20.25 24 15V7z"/><path d="M9 14l3 3 7-7"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Unlawful Arrest</span>
+        </a>
+        <a href="#immigration-law" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="5" width="20" height="18" rx="2"/><path d="M4 10h20"/><path d="M9 5V3M19 5V3"/><path d="M8 15h5M8 18h8"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Immigration Law</span>
+        </a>
+        <a href="#tribal-authorities" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="14" cy="9" r="3"/><path d="M6 24c0-4.418 3.582-8 8-8s8 3.582 8 8"/><path d="M3 20c0-2.761 2.239-5 5-5M25 20c0-2.761-2.239-5-5-5"/><circle cx="7" cy="12" r="2"/><circle cx="21" cy="12" r="2"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Tribal Authorities</span>
+        </a>
+        <a href="#debt-collections" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="14" cy="14" r="10"/><path d="M14 8v2m0 8v2"/><path d="M10.5 12a3.5 3.5 0 017 0c0 2-3.5 3-3.5 5m0 1h.01"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Debt Collections</span>
+        </a>
+        <a href="#raf-claims" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="12" width="24" height="9" rx="2"/><path d="M6 12V9a2 2 0 012-2h12a2 2 0 012 2v3"/><circle cx="8" cy="21" r="2"/><circle cx="20" cy="21" r="2"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">RAF Claims</span>
+        </a>
+        <a href="#labour-law" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="9" r="3"/><circle cx="18" cy="9" r="3"/><path d="M4 22c0-3.314 2.686-6 6-6h8c3.314 0 6 2.686 6 6"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Labour Law &amp; Arbitration</span>
+        </a>
+        <a href="#wills-contracts" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 4h16v20H6z"/><path d="M10 9h8M10 13h8M10 17h5"/><path d="M18 21l3-3-1.5-1.5-3 3V21h1.5z"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Wills &amp; Contracts</span>
+        </a>
+        <a href="#deceased-estates" class="flex items-center gap-3 p-3.5 bg-white rounded-lg border border-gray-100 hover:border-gold hover:shadow-sm transition-all group sm:col-span-1 col-span-2">
+          <div class="w-7 h-7 text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 6h18v16H5z"/><path d="M9 6V4h10v2"/><path d="M9 12h10M9 16h7"/></svg>
+          </div>
+          <span class="text-xs font-semibold text-navy tracking-wide leading-tight">Deceased Estates</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       PRACTICE AREAS — ACCORDION
+  ====================================================== -->
+  <section class="py-24 lg:py-32 bg-white">
+    <div class="max-w-4xl mx-auto px-6 lg:px-10">
+
+      <!-- ── Civic Litigation ── -->
+      <div id="civic-litigation" class="fade-up accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 6l9-4 9 4v6c0 6-4 10-9 11C7 22 3 18 3 12z"/><path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">01</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Civic Litigation</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              We represent individuals and organisations in civil court proceedings, protecting your rights and interests through skilled advocacy at every level of court. Our team handles a broad range of civil disputes — from contractual claims and property matters through to constitutional litigation.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              Whether you are a plaintiff or defendant, we bring strategic thinking and meticulous preparation to every civil matter, ensuring your case is presented with the full force of experienced legal counsel.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Civil Claims &amp; Summons</li>
+              <li>Urgent Court Applications</li>
+              <li>Interdicts &amp; Injunctions</li>
+              <li>Contractual Dispute Resolution</li>
+              <li>Constitutional Matters</li>
+              <li>High Court &amp; Magistrate's Court</li>
+              <li>Mediation &amp; Settlement</li>
+              <li>Appeals &amp; Reviews</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Criminal Litigation ── -->
+      <div id="criminal-litigation" class="fade-up delay-1 accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="6" width="18" height="15" rx="1"/><path d="M7 6V4a5 5 0 0110 0v2"/><path d="M9 13h6M9 17h4"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">02</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Criminal Litigation</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              Facing criminal charges is one of the most serious situations a person can encounter. Our criminal litigation team provides robust, dedicated defence representation — from the moment of arrest through bail applications, trial proceedings, and appeals. Every accused person deserves a vigorous defence, and we deliver exactly that.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              We also advise private prosecutors and act for complainants in criminal matters, bringing the same level of thoroughness and commitment to every side of a criminal matter.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Criminal Defence Representation</li>
+              <li>Bail Applications</li>
+              <li>Plea Negotiations</li>
+              <li>Trial Advocacy</li>
+              <li>Sentencing Proceedings</li>
+              <li>Criminal Appeals</li>
+              <li>Private Prosecution</li>
+              <li>Diversion Applications</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Family Law ── -->
+      <div id="family-law" class="fade-up delay-2 accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 21V11L12 3l9 8v10H15V15H9v6z"/><circle cx="12" cy="9" r="1.5"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">03</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Family Law</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              Family law matters are among the most emotionally sensitive legal issues our clients face. We handle these matters with discretion, compassion, and professionalism — always with your family's best interests and those of your children at the centre of our approach.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              Our family law attorneys are experienced in both contested and uncontested proceedings, negotiating durable settlements where possible and advocating firmly in court when necessary.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Divorce Proceedings</li>
+              <li>Child Custody &amp; Guardianship</li>
+              <li>Maintenance Claims</li>
+              <li>Adoption</li>
+              <li>Domestic Violence &amp; Protection Orders</li>
+              <li>Ante- &amp; Postnuptial Contracts</li>
+              <li>Division of the Joint Estate</li>
+              <li>Parental Rights &amp; Responsibilities</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Unlawful Arrest ── -->
+      <div id="unlawful-arrest" class="fade-up delay-3 accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 3L4 6v6c0 5.25 3.6 10.15 8 11.333C16.4 22.15 20 17.25 20 12V6L12 3z"/><path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">04</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Unlawful Arrest</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              An unlawful arrest violates your fundamental constitutional rights. If you or a loved one has been arrested without lawful cause, detained unlawfully, or subjected to police misconduct, you may have a claim for damages against the arresting authority or the South African Police Service.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              Our attorneys are experienced in pursuing constitutional damages claims and Section 342A applications against the State — holding law enforcement accountable and securing appropriate compensation for our clients.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Wrongful Arrest Claims</li>
+              <li>Unlawful Detention</li>
+              <li>Police Brutality &amp; Misconduct</li>
+              <li>Constitutional Damages Claims</li>
+              <li>Malicious Prosecution</li>
+              <li>Claims Against the SAPS</li>
+              <li>Section 35 Constitutional Rights</li>
+              <li>Urgent Release Applications</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Immigration Law ── -->
+      <div id="immigration-law" class="fade-up delay-4 accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 4V2M17 4V2"/><path d="M7 14h4M7 17h6"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">05</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Immigration Law</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              South Africa's immigration system is complex and frequently changing. We assist individuals, families, and businesses with the full range of immigration matters — from visitor and work permits through to permanent residency and asylum applications. We also represent clients facing deportation or adverse immigration decisions.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              Our immigration team works closely with the Department of Home Affairs and understands the procedural and regulatory requirements that govern each type of immigration matter, ensuring timely and accurate applications on your behalf.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Work &amp; Business Permits</li>
+              <li>Permanent Residency Applications</li>
+              <li>Visitor &amp; Study Visas</li>
+              <li>Asylum &amp; Refugee Status</li>
+              <li>Deportation Defence</li>
+              <li>Appeals Against Refusals</li>
+              <li>Critical Skills Visas</li>
+              <li>Spousal &amp; Family Reunification</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Tribal Authorities ── -->
+      <div id="tribal-authorities" class="fade-up accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="7" r="3"/><path d="M5 20c0-3.866 3.134-7 7-7s7 3.134 7 7"/><circle cx="4" cy="10" r="2"/><path d="M2 18c0-2.21 1.79-4 4-4"/><circle cx="20" cy="10" r="2"/><path d="M22 18c0-2.21-1.79-4-4-4"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">06</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Tribal Authorities</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              Tribal and customary law matters require a specialist understanding of both South African statutory law and indigenous customary law systems. We advise individuals, traditional communities, and traditional councils on matters governed by customary law — including land rights, succession, and disputes within traditional authority jurisdictions.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              We also assist clients in navigating the interface between customary law and statutory law, ensuring your rights are protected across both legal frameworks.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Customary Land Rights</li>
+              <li>Traditional Community Disputes</li>
+              <li>Customary Succession &amp; Inheritance</li>
+              <li>Traditional Authority Governance</li>
+              <li>Customary Marriage Recognition</li>
+              <li>Community Property Rights</li>
+              <li>Interface with Statutory Law</li>
+              <li>Dispute Resolution in Traditional Courts</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Debt Collections ── -->
+      <div id="debt-collections" class="fade-up delay-1 accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v2m0 6v2"/><path d="M9.5 10a2.5 2.5 0 015 0c0 1.8-2.5 2.5-2.5 4m0 2h.01"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">07</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Debt Collections</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              Unpaid debts can cripple businesses and individuals alike. Our debt collections practice provides efficient, legally compliant debt recovery services — from demand letters through to judgement and execution proceedings. We act for creditors across all sectors, recovering outstanding amounts with urgency and precision.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              We also advise debtors on their rights under the National Credit Act and assist with debt restructuring, administration orders, and defending collection proceedings where warranted.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Letter of Demand</li>
+              <li>Summons &amp; Default Judgment</li>
+              <li>Emolument Attachment Orders</li>
+              <li>Warrant of Execution</li>
+              <li>Debt Restructuring Advice</li>
+              <li>Sequestration Proceedings</li>
+              <li>National Credit Act Compliance</li>
+              <li>Commercial Debt Recovery</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── RAF Claims ── -->
+      <div id="raf-claims" class="fade-up delay-2 accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="1" y="11" width="22" height="8" rx="2"/><path d="M5 11V8a4 4 0 014-4h6a4 4 0 014 4v3"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">08</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">RAF Claims</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              If you or a loved one has been injured in a motor vehicle accident, you may be entitled to compensation from the Road Accident Fund (RAF). We handle RAF claims from initial lodgment through to settlement or trial, ensuring that victims of road accidents receive the maximum compensation they are entitled to.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              Our RAF specialists understand the fund's processes and limitations intimately, and we fight to ensure our clients are not short-changed by inadequate offers or procedural obstacles.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>RAF Claim Lodgment</li>
+              <li>General Damages Claims</li>
+              <li>Loss of Income Claims</li>
+              <li>Future Medical Expenses</li>
+              <li>Dependants' Claims (Wrongful Death)</li>
+              <li>Serious Injury Assessment</li>
+              <li>Negotiation &amp; Settlement</li>
+              <li>Trial Advocacy for RAF Matters</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Labour Law & Arbitration ── -->
+      <div id="labour-law" class="fade-up delay-3 accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.418 3.582-8 8-8s8 3.582 8 8"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">09</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Labour Law &amp; Arbitration</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              South Africa's labour environment is heavily regulated and constantly evolving. Our labour law and arbitration practice advises both employers and employees on the full range of employment-related matters — from routine HR compliance through to complex retrenchment processes, CCMA proceedings, and Labour Court litigation.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              We are experienced arbitrators and advocates in labour matters, representing clients with a strong track record across the CCMA, Bargaining Councils, Labour Court, and Labour Appeal Court.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Employment Contract Drafting</li>
+              <li>Unfair Dismissal &amp; Discrimination</li>
+              <li>CCMA Representation</li>
+              <li>Retrenchments &amp; Section 189</li>
+              <li>Labour Arbitration</li>
+              <li>Disciplinary Hearings</li>
+              <li>Collective Bargaining</li>
+              <li>Labour Court Advocacy</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Drafting of Wills & Contracts ── -->
+      <div id="wills-contracts" class="fade-up delay-4 accordion-item border-b border-gray-100 scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">10</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Drafting of Wills &amp; Contracts</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              A well-drafted will or contract is one of the most important legal documents you will ever sign. Our attorneys bring precision, clarity, and legal expertise to the drafting of wills, testaments, and all forms of commercial and personal contracts — ensuring that your intentions are clearly captured and legally enforceable.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              We also review and advise on existing contracts, identify risk areas, and assist with contract amendments and dispute prevention — giving you the certainty that your agreements will hold up when it matters most.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Will Drafting &amp; Review</li>
+              <li>Testamentary Trusts</li>
+              <li>Living Wills</li>
+              <li>Commercial Contracts</li>
+              <li>Sale &amp; Purchase Agreements</li>
+              <li>Service Level Agreements</li>
+              <li>Lease Agreements</li>
+              <li>Contract Review &amp; Advice</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Administration of Deceased Estates ── -->
+      <div id="deceased-estates" class="fade-up accordion-item scroll-mt-28">
+        <button class="accordion-btn w-full flex items-center justify-between gap-6 py-8 text-left group">
+          <div class="flex items-center gap-5">
+            <div class="w-12 h-12 rounded bg-navy/5 group-hover:bg-gold/10 flex items-center justify-center flex-shrink-0 transition-colors">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16v16H4z"/><path d="M4 9h16"/><path d="M9 4v5"/><path d="M8 14h5M8 17h8"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs text-gold font-semibold tracking-widest uppercase block mb-0.5">11</span>
+              <h2 class="font-serif text-2xl lg:text-3xl text-navy group-hover:text-gold transition-colors">Administration of Deceased Estates</h2>
+            </div>
+          </div>
+          <svg class="accordion-icon w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="accordion-content">
+          <div class="pb-10 pl-[68px]">
+            <p class="text-gray-500 leading-relaxed mb-6">
+              Administering a deceased estate can be a complex and emotionally taxing process. Our team assists executors, heirs, and next-of-kin in navigating the estate administration process under the Administration of Estates Act — from reporting the estate to the Master of the High Court through to final distribution to beneficiaries.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-8">
+              We act as professional executors and advisors in both testate (with a will) and intestate (without a will) estates, ensuring that assets are properly identified, valued, and distributed in accordance with the law and the wishes of the deceased.
+            </p>
+            <h4 class="font-semibold text-navy text-sm tracking-wide uppercase mb-4">Key Services</h4>
+            <ul class="gold-list grid sm:grid-cols-2 gap-x-8">
+              <li>Reporting Estates to the Master</li>
+              <li>Appointment of Executor</li>
+              <li>Asset Identification &amp; Valuation</li>
+              <li>Liquidation &amp; Distribution Account</li>
+              <li>Intestate Succession</li>
+              <li>Beneficiary Disputes</li>
+              <li>Estate Duty Compliance</li>
+              <li>Winding Up of Trusts</li>
+            </ul>
+            <div class="mt-8">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light transition-colors">
+                Enquire About This Service
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       CTA
+  ====================================================== -->
+  <section class="cta-bg py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 text-center">
+      <div class="fade-up max-w-2xl mx-auto">
+        <p class="overline mb-6">Not Sure Where to Start?</p>
+        <h2 class="font-serif text-4xl lg:text-5xl text-white leading-tight mb-6">
+          Let's Discuss Your<br />Legal Needs
+        </h2>
+        <p class="text-white/60 leading-relaxed mb-8 font-light">
+          Our attorneys will help identify the right approach for your specific situation. Book a confidential initial consultation.
+        </p>
+        <a href="contact.html"
+           class="inline-block px-10 py-4 bg-gold text-navy font-semibold tracking-wide text-sm rounded hover:bg-cream transition-all duration-200">
+          Book a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="bg-navy text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        <div class="lg:col-span-1">
+          <span class="inline-block bg-white rounded-sm px-2 py-1 mb-4">
+            <img src="Logo.jpeg" alt="MM Incorporated" class="h-8 w-auto" />
+          </span>
+          <p class="text-white/50 text-sm leading-relaxed mb-6">Trusted legal counsel across South Africa's most demanding practice areas.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-white/40 hover:text-gold transition-colors" aria-label="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" class="text-white/40 hover:text-gold transition-colors" aria-label="Twitter/X">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white text-sm font-semibold tracking-widest uppercase mb-5">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html"    class="text-white/50 text-sm hover:text-gold transition-colors">Home</a></li>
+            <li><a href="about.html"    class="text-white/50 text-sm hover:text-gold transition-colors">About Us</a></li>
+            <li><a href="services.html" class="text-white/50 text-sm hover:text-gold transition-colors">Services</a></li>
+            <li><a href="insights.html" class="text-white/50 text-sm hover:text-gold transition-colors">Insights</a></li>
+            <li><a href="contact.html"  class="text-white/50 text-sm hover:text-gold transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-sm font-semibold tracking-widest uppercase mb-5">Practice Areas</h4>
+          <ul class="space-y-3">
+            <li><a href="#civic-litigation"    class="text-white/50 text-sm hover:text-gold transition-colors">Civic Litigation</a></li>
+            <li><a href="#criminal-litigation" class="text-white/50 text-sm hover:text-gold transition-colors">Criminal Litigation</a></li>
+            <li><a href="#family-law"          class="text-white/50 text-sm hover:text-gold transition-colors">Family Law</a></li>
+            <li><a href="#raf-claims"          class="text-white/50 text-sm hover:text-gold transition-colors">RAF Claims</a></li>
+            <li><a href="#labour-law"          class="text-white/50 text-sm hover:text-gold transition-colors">Labour Law &amp; Arbitration</a></li>
+            <li><a href="#deceased-estates"    class="text-white/50 text-sm hover:text-gold transition-colors">Deceased Estates</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-sm font-semibold tracking-widest uppercase mb-5">Contact</h4>
+          <ul class="space-y-4 text-white/50 text-sm">
+            <li class="flex gap-3 items-start"><svg class="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>222 Smith Street, Braamfontein, Johannesburg, 2017</li>
+            <li class="flex gap-3 items-start"><svg class="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>072 316 8385</li>
+            <li class="flex gap-3 items-start"><svg class="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>mamaboloinc@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/30 text-xs">&copy; 2025 MM Incorporated (Mamabolo at Law). All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/30 text-xs hover:text-gold transition-colors">Privacy Policy</a>
+          <a href="#" class="text-white/30 text-xs hover:text-gold transition-colors">Terms of Use</a>
+          <a href="#" class="text-white/30 text-xs hover:text-gold transition-colors">PAIA Manual</a>
+        </div>
+      </div>
+      <p class="mt-6 text-white/20 text-xs leading-relaxed border-t border-white/5 pt-6">
+        <strong class="font-medium">Legal Disclaimer:</strong> The information on this website is provided for general informational purposes only and does not constitute legal advice.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/27723168385?text=Hello%20MM%20Incorporated%2C%20I%20would%20like%20to%20enquire%20about%20your%20legal%20services."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp"
+     class="fixed bottom-6 right-6 z-50 group">
+    <div class="relative">
+      <div class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></div>
+      <div class="relative w-14 h-14 bg-[#25D366] hover:bg-[#1aad50] rounded-full flex items-center justify-center shadow-xl shadow-green-500/25 transition-all duration-200 hover:scale-110">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </div>
+      <div class="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        <div class="bg-navy text-white text-xs font-semibold px-3 py-1.5 rounded-md shadow-lg whitespace-nowrap">
+          Chat on WhatsApp
+          <div class="absolute top-full right-4 w-0 h-0 border-4 border-transparent border-t-[#0A1628]"></div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <script>
+    // Sticky nav
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 80);
+    }, { passive: true });
+
+    // Mobile menu
+    const menuBtn      = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu   = document.getElementById('mobileMenu');
+    const menuBars     = menuBtn.querySelectorAll('.menu-bar');
+    let menuOpen = false;
+    function openMenu() {
+      menuOpen = true;
+      mobileMenu.style.transform = 'translateX(0)';
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      menuBars[0].style.transform = 'translateY(6px) rotate(45deg)';
+      menuBars[1].style.opacity   = '0';
+      menuBars[2].style.transform = 'translateY(-6px) rotate(-45deg)';
+    }
+    function closeMenu() {
+      menuOpen = false;
+      mobileMenu.style.transform = 'translateX(100%)';
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      menuBars[0].style.transform = '';
+      menuBars[1].style.opacity   = '';
+      menuBars[2].style.transform = '';
+    }
+    menuBtn.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMenu));
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Accordion
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item    = btn.closest('.accordion-item');
+        const content = item.querySelector('.accordion-content');
+        const isOpen  = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.accordion-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.accordion-content').classList.remove('open');
+        });
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          item.classList.add('open');
+          content.classList.add('open');
+        }
+      });
+    });
+
+    // Auto-open if hash matches
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target && target.classList.contains('accordion-item')) {
+        target.classList.add('open');
+        target.querySelector('.accordion-content').classList.add('open');
+      }
+    }
+  </script>
+
+</body>
+</html>
